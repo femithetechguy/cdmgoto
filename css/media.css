@@ -452,23 +452,114 @@
     font-weight: 600;
 }
 
-/* Responsive Design for Media Page */
-@media (max-width: 768px) {
+/* Media Page Responsive Design - Extends Global */
+
+/* Use global responsive variables and extend them */
+.media-hero {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    margin: calc(var(--spacing-lg) * -1) calc(var(--spacing-lg) * -1) var(--spacing-xl) calc(var(--spacing-lg) * -1);
+}
+
+.media-hero h1 {
+    font-size: clamp(var(--font-size-2xl), 5vw, var(--font-size-4xl));
+}
+
+.media-hero .hero-subtitle {
+    font-size: clamp(var(--font-size-lg), 3vw, var(--font-size-xl));
+}
+
+.media-hero .hero-description {
+    font-size: clamp(var(--font-size-base), 2.5vw, var(--font-size-lg));
+}
+
+/* Responsive section padding using global variables */
+.sop-details,
+.pre-service-section,
+.live-service-section,
+.post-service-section,
+.pro-tips-section {
+    padding: var(--spacing-lg);
+}
+
+/* Responsive grids using global system */
+.sop-details .section-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: var(--spacing-md);
+}
+
+.pro-tips-section .section-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: var(--spacing-md);
+}
+
+/* Equipment grid responsive */
+.equipment-grid .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: var(--spacing-md);
+}
+
+.equipment-grid .grid-icon {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* Interactive elements responsive sizing */
+.timer-btn,
+.emergency-btn,
+.check-equipment {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    min-height: 44px; /* Touch-friendly */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Responsive numbered lists */
+.request-process .content-list li,
+.training-checklist .content-list li {
+    padding: var(--spacing-md);
+}
+
+.request-process .content-list li::before {
+    width: clamp(20px, 3vw, 24px);
+    height: clamp(20px, 3vw, 24px);
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 576px) and (max-width: 991px) {
     .media-hero {
-        padding: 2rem 1rem;
-        margin: -1rem -1rem 2rem -1rem;
+        padding: var(--spacing-xl) var(--spacing-md);
     }
     
-    .media-hero h1 {
-        font-size: 2.2rem;
+    .equipment-grid .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sop-details .section-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile-first responsive breakpoints */
+@media (max-width: 767px) {
+    .media-hero {
+        padding: var(--spacing-lg) var(--spacing-sm);
+        margin: calc(var(--spacing-sm) * -1) calc(var(--spacing-sm) * -1) var(--spacing-lg) calc(var(--spacing-sm) * -1);
     }
     
     .sop-details,
     .pre-service-section,
     .live-service-section,
     .post-service-section,
-    .pro-tips-section {
-        padding: 1.5rem;
+    .pro-tips-section,
+    .troubleshooting-list,
+    .request-process,
+    .training-checklist {
+        padding: var(--spacing-md);
     }
     
     .sop-details .section-items,
@@ -476,23 +567,36 @@
         grid-template-columns: 1fr;
     }
     
+    .equipment-grid .grid {
+        grid-template-columns: 1fr;
+    }
+    
     .request-process .content-list li strong,
     .request-process .content-list li span {
-        margin-left: 1rem;
+        margin-left: var(--spacing-lg);
     }
     
     .request-process .content-list li::before {
-        left: 0.5rem;
+        left: var(--spacing-sm);
+    }
+    
+    /* Stack emergency buttons */
+    .emergency-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xs);
+    }
+    
+    .emergency-btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
-@media (max-width: 480px) {
-    .media-hero h1 {
-        font-size: 1.8rem;
-    }
-    
-    .equipment-grid .grid-icon {
-        font-size: 2rem;
+/* Small mobile devices */
+@media (max-width: 575px) {
+    .media-hero {
+        padding: var(--spacing-md) var(--spacing-xs);
     }
     
     .sop-details,
@@ -500,6 +604,61 @@
     .request-process,
     .training-checklist,
     .pro-tips-section {
-        padding: 1rem;
+        padding: var(--spacing-sm);
+    }
+    
+    .request-process .content-list li,
+    .training-checklist .content-list li {
+        padding: var(--spacing-sm);
+    }
+    
+    .request-process .content-list li strong,
+    .request-process .content-list li span {
+        margin-left: var(--spacing-md);
+    }
+    
+    .request-process .content-list li::before {
+        left: var(--spacing-xs);
+        width: 18px;
+        height: 18px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Large screens optimization */
+@media (min-width: 1200px) {
+    .media-hero {
+        padding: var(--spacing-xl) var(--spacing-xl);
+    }
+    
+    .equipment-grid .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .sop-details .section-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .pro-tips-section .section-items {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Print styles for media documentation */
+@media print {
+    .media-hero,
+    .timer-container,
+    .emergency-quick-access,
+    .search-filter-controls {
+        display: none;
+    }
+    
+    .content-section {
+        break-inside: avoid;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .equipment-grid .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
