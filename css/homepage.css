@@ -311,19 +311,75 @@
     opacity: 0.9;
 }
 
-/* Responsive Design for Homepage */
-@media (max-width: 768px) {
+/* Homepage Responsive Design - Extends Global */
+
+/* Use global responsive variables consistently */
+.homepage-hero {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    margin: calc(var(--spacing-lg) * -1) calc(var(--spacing-lg) * -1) var(--spacing-lg) calc(var(--spacing-lg) * -1);
+}
+
+.homepage-hero h1 {
+    font-size: clamp(var(--font-size-2xl), 6vw, var(--font-size-4xl));
+}
+
+.homepage-hero p {
+    font-size: clamp(var(--font-size-base), 3vw, var(--font-size-xl));
+}
+
+/* Responsive grids using global system */
+.quick-access-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: var(--spacing-lg);
+    text-align: center;
+}
+
+.department-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+    gap: var(--spacing-sm);
+}
+
+/* Consistent spacing using global variables */
+.quick-access-card,
+.homepage-stats,
+.homepage-search {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.stat-number {
+    font-size: clamp(var(--font-size-2xl), 5vw, var(--font-size-4xl));
+}
+
+.stat-label {
+    font-size: clamp(var(--font-size-xs), 2vw, var(--font-size-sm));
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 576px) and (max-width: 991px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .department-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
     .homepage-hero {
-        padding: 2rem 1rem;
-        margin: -1rem -1rem 2rem -1rem;
-    }
-    
-    .homepage-hero h1 {
-        font-size: 2rem;
-    }
-    
-    .homepage-hero p {
-        font-size: 1rem;
+        padding: var(--spacing-lg) var(--spacing-sm);
+        margin: calc(var(--spacing-sm) * -1) calc(var(--spacing-sm) * -1) var(--spacing-lg) calc(var(--spacing-sm) * -1);
     }
     
     .quick-access-grid {
@@ -332,27 +388,134 @@
     
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
     }
     
     .department-grid {
         grid-template-columns: 1fr;
     }
+    
+    .quick-access-card,
+    .homepage-stats,
+    .homepage-search {
+        padding: var(--spacing-md);
+    }
+    
+    .search-box {
+        max-width: 100%;
+    }
+    
+    .search-input {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
 }
 
-@media (max-width: 480px) {
+/* Small mobile devices */
+@media (max-width: 575px) {
     .homepage-hero {
-        padding: 1.5rem 0.5rem;
+        padding: var(--spacing-md) var(--spacing-xs);
     }
     
     .quick-access-card {
-        padding: 1.5rem;
+        padding: var(--spacing-md);
     }
     
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
     }
     
-    .stat-number {
-        font-size: 2rem;
+    .homepage-stats,
+    .homepage-search {
+        padding: var(--spacing-sm);
+    }
+    
+    .search-btn {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: var(--spacing-xs);
+        width: 100%;
+    }
+    
+    .search-box {
+        position: relative;
+    }
+    
+    .announcements {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Large screens optimization */
+@media (min-width: 1200px) {
+    .homepage-hero {
+        padding: var(--spacing-xl) var(--spacing-xl);
+    }
+    
+    .quick-access-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .department-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+    .department-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .homepage-hero {
+        background-attachment: fixed;
+    }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+    .homepage-hero {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .quick-access-card,
+    .department-link,
+    .update-item {
+        transition: none;
+    }
+    
+    .homepage-hero .btn:hover {
+        transform: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .homepage-stats {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+    
+    .quick-access-card {
+        background: #2d3748;
+        color: #e2e8f0;
+        border-color: #4a5568;
     }
 }
