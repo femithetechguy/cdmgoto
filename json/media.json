@@ -1,0 +1,280 @@
+{
+  "title": "Church Media Ministry Documentation",
+  "subtitle": "Standard Operating Procedures & Process Documentation",
+  "hero": {
+    "title": "Media Ministry Documentation",
+    "subtitle": "Excellence in Worship Technology",
+    "description": "Creating detailed process documentation ensures consistency, simplifies training for volunteers, and minimizes errors during services. Your comprehensive guide to church media operations.",
+    "className": "media-hero",
+    "buttons": [
+      {
+        "text": "View SOPs",
+        "link": "#procedures",
+        "className": "btn-primary"
+      },
+      {
+        "text": "Equipment List",
+        "link": "#equipment",
+        "className": "btn-secondary"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "General SOP Document Details",
+      "className": "sop-details",
+      "content": "Every Standard Operating Procedure should contain essential metadata for tracking and accountability.",
+      "items": [
+        {
+          "title": "SOP Title",
+          "content": "Weekend Service: Live Stream Operation"
+        },
+        {
+          "title": "Process Owner",
+          "content": "Media Director/Tech Lead"
+        },
+        {
+          "title": "Current Revision",
+          "content": "Version 2.1 - Updated October 2025"
+        },
+        {
+          "title": "Applicable Roles",
+          "content": "Live Stream Operator, Camera Operator, A/V Technician"
+        },
+        {
+          "title": "Goal/Objective",
+          "content": "To broadcast a clear, high-quality, and reliable video and audio feed of the service to our online platforms (YouTube, Facebook)."
+        }
+      ]
+    },
+    {
+      "title": "Pre-Service Setup Procedures",
+      "className": "pre-service-section",
+      "content": "Critical preparation steps that must be completed before service begins.",
+      "items": [
+        {
+          "title": "Power Up & Check Gear (90 min before)",
+          "content": "Turn on all computers, A/V switcher, cameras, and network bridge. Log into streaming platform accounts. Verify all equipment status lights are green."
+        },
+        {
+          "title": "A/V System Test (60 min before)",
+          "content": "Check audio board: Run pink noise to verify main mix and stream mix levels. Confirm all stage mics are active and properly labeled."
+        },
+        {
+          "title": "Video Camera Setup (45 min before)",
+          "content": "Turn on cameras. Calibrate white balance/iris. Confirm all cameras are feeding correctly into the video switcher."
+        },
+        {
+          "title": "Presentation Prep (30 min before)",
+          "content": "Load all sermon graphics, announcements slides, and song lyrics into presentation software. Run through service rundown cue-by-cue."
+        }
+      ]
+    },
+    {
+      "title": "Live Service Operations",
+      "className": "live-service-section",
+      "content": "Real-time operations during the worship service.",
+      "items": [
+        {
+          "title": "Start Live Stream (5 min before)",
+          "content": "Click 'Go Live' on the streaming software and verify the stream is active on all platforms. Announce to the team: 'Stream is Live.'"
+        },
+        {
+          "title": "Manage Audio Mix (Continuous)",
+          "content": "During Worship: Balance instrument and vocal volumes. During Preaching: Ensure pastor's voice is clear and consistent. Monitor the stream mix separately!"
+        },
+        {
+          "title": "Video Switching (Continuous)",
+          "content": "Follow the Shot List/Director's cues. Use a variety of close-ups (IMAG) and wide shots. Avoid rapid-fire cuts."
+        },
+        {
+          "title": "Manage Graphics/Lyrics (As needed)",
+          "content": "Display lyrics in time with the music. Transition sermon points as the speaker moves on."
+        }
+      ]
+    },
+    {
+      "title": "Post-Service Procedures",
+      "className": "post-service-section",
+      "content": "Essential cleanup and archiving tasks after service completion.",
+      "items": [
+        {
+          "title": "End Stream & Recording (Immediately after)",
+          "content": "Click 'End Stream' on the software. Verify that the recorded file is saved to the designated server/drive."
+        },
+        {
+          "title": "Power Down Gear (Within 20 min)",
+          "content": "Turn off all non-essential equipment (cameras, projectors, stage lights, computers). Leave the soundboard on standby unless otherwise directed."
+        },
+        {
+          "title": "Media Archiving (Within 24 hours)",
+          "content": "Upload the recorded service (audio and video) to the cloud and a secondary local backup. Begin post-production for VOD (Video on Demand)."
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "title": "Equipment & Asset Documentation",
+    "className": "equipment-grid",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "🎵",
+        "title": "Audio Equipment",
+        "description": "Soundboard/Mixer, Microphones, In-Ear Monitors, Audio Processing"
+      },
+      {
+        "icon": "📹",
+        "title": "Video Equipment", 
+        "description": "Cameras, Video Switcher, Projectors, Screens, Lighting"
+      },
+      {
+        "icon": "💻",
+        "title": "Software Systems",
+        "description": "Presentation Software, Streaming Software, Recording Systems"
+      },
+      {
+        "icon": "🌐",
+        "title": "Network & Streaming",
+        "description": "Internet Connection, Streaming PC, Backup Systems, Monitoring"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "title": "Emergency Protocols",
+      "content": "Quick reference guide for handling technical failures during live services. Know what to do when audio fails, stream goes down, or equipment malfunctions.",
+      "className": "emergency-card",
+      "link": "#emergency"
+    },
+    {
+      "title": "Media Request Workflow",
+      "content": "Step-by-step process for other ministries to request media services. From initial request to final delivery and archiving.",
+      "className": "workflow-card", 
+      "link": "#workflow"
+    },
+    {
+      "title": "Training & Onboarding",
+      "content": "Comprehensive checklist ensuring every new volunteer receives consistent training and certification for independent operation.",
+      "className": "training-card",
+      "link": "#training"
+    }
+  ],
+  "lists": [
+    {
+      "title": "Troubleshooting Quick Reference",
+      "type": "unordered",
+      "className": "troubleshooting-list",
+      "items": [
+        {
+          "title": "Audio Feed Failure",
+          "content": "Switch to backup feed → Use handheld mic → Check connections"
+        },
+        {
+          "title": "Stream Goes Down", 
+          "content": "Check internet → Restart streaming software → Switch to backup platform"
+        },
+        {
+          "title": "Projector Screen Black",
+          "content": "Check HDMI connections → Toggle input source → Use backup monitor"
+        },
+        {
+          "title": "Pastor's Mic Failure",
+          "content": "Hand backup handheld mic → Mute original channel → Use podium mic if available"
+        }
+      ]
+    },
+    {
+      "title": "Media Request Process (3-Week Timeline)",
+      "type": "ordered",
+      "className": "request-process",
+      "items": [
+        {
+          "title": "Request Submission",
+          "content": "Ministry submits formal Media Request Form (3 weeks minimum notice)"
+        },
+        {
+          "title": "Review & Planning",
+          "content": "Media Director reviews and determines resource needs (2 business days)"
+        },
+        {
+          "title": "Production Phase",
+          "content": "Content creation, filming, editing (2 weeks to draft completion)"
+        },
+        {
+          "title": "Approval Process",
+          "content": "Ministry leader and executive team review (1 week before launch)"
+        },
+        {
+          "title": "Delivery & Publication",
+          "content": "Final delivery via cloud drive and scheduled publication"
+        },
+        {
+          "title": "Archiving",
+          "content": "Move to completed projects folder (within 3 days)"
+        }
+      ]
+    },
+    {
+      "title": "New Volunteer Training Checklist",
+      "type": "ordered", 
+      "className": "training-checklist",
+      "items": [
+        {
+          "title": "Orientation",
+          "content": "Review Media Team Vision, Mission, and Confidentiality Policies"
+        },
+        {
+          "title": "Technical Training",
+          "content": "System power procedures, presentation software, hands-on practice"
+        },
+        {
+          "title": "Shadowing Period",
+          "content": "Must shadow current operator for 3 services minimum"
+        },
+        {
+          "title": "Emergency Protocols",
+          "content": "Master troubleshooting procedures and emergency responses"
+        },
+        {
+          "title": "Independent Operation",
+          "content": "Solo operation with mentor nearby for 1 service"
+        },
+        {
+          "title": "Final Certification",
+          "content": "Media Director sign-off for independent service operation"
+        }
+      ]
+    }
+  ],
+  "additionalSections": [
+    {
+      "id": "pro-tips",
+      "title": "The '5 W's' of Process Documentation",
+      "className": "pro-tips-section",
+      "content": "When documenting any task, make sure you answer these questions for every step:",
+      "items": [
+        {
+          "title": "WHAT",
+          "content": "What is the specific task? (e.g., Start the live stream)"
+        },
+        {
+          "title": "WHO", 
+          "content": "Who is responsible? (e.g., Live Stream Operator)"
+        },
+        {
+          "title": "WHEN",
+          "content": "When does it happen? (e.g., 5 minutes before service)"
+        },
+        {
+          "title": "WHERE",
+          "content": "Where is the equipment? (e.g., Streaming PC in Control Desk)"
+        },
+        {
+          "title": "WHY",
+          "content": "Why are we doing it? (e.g., To ensure online congregation can participate)"
+        }
+      ]
+    }
+  ]
+}

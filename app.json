@@ -1,0 +1,199 @@
+{
+  "app": {
+    "name": "CDM Documentation Portal",
+    "version": "1.0.0",
+    "description": "Dynamic documentation portal for all CDM departments",
+    "type": "dynamic",
+    "lastUpdated": "2025-10-06"
+  },
+  "config": {
+    "dynamic": true,
+    "autoGenerate": true,
+    "entryPoint": "index.html",
+    "baseUrl": "/",
+    "theme": "default"
+  },
+  "global": {
+    "styles": {
+      "main": "global.css",
+      "path": "./"
+    },
+    "scripts": {
+      "main": "global.js",
+      "path": "./"
+    }
+  },
+  "assets": {
+    "css": {
+      "path": "css/",
+      "files": [
+        "homepage.css",
+        "media.css",
+        "choir.css"
+      ]
+    },
+    "js": {
+      "path": "js/",
+      "files": [
+        "homepage.js",
+        "media.js",
+        "choir.js"
+      ]
+    },
+    "json": {
+      "path": "json/",
+      "files": [
+        "homepage.json",
+        "media.json",
+        "choir.json"
+      ]
+    },
+    "markdown": {
+      "path": "markdown/",
+      "files": []
+    },
+    "images": {
+      "path": "images/",
+      "files": []
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "id": "homepage",
+        "name": "Home",
+        "title": "CDM Documentation Home",
+        "active": true,
+        "type": "dynamic",
+        "content": {
+          "source": "json",
+          "file": "homepage.json",
+          "path": "json/"
+        },
+        "styles": {
+          "file": "homepage.css",
+          "path": "css/"
+        },
+        "scripts": {
+          "file": "homepage.js",
+          "path": "js/"
+        },
+        "icon": "home",
+        "order": 1
+      },
+      {
+        "id": "media",
+        "name": "Media",
+        "title": "Media Resources",
+        "active": false,
+        "type": "dynamic",
+        "content": {
+          "source": "json",
+          "file": "media.json",
+          "path": "json/"
+        },
+        "styles": {
+          "file": "media.css",
+          "path": "css/"
+        },
+        "scripts": {
+          "file": "media.js",
+          "path": "js/"
+        },
+        "icon": "media",
+        "order": 2
+      },
+      {
+        "id": "choir",
+        "name": "Choir",
+        "title": "Choir Department",
+        "active": false,
+        "type": "dynamic",
+        "content": {
+          "source": "json",
+          "file": "choir.json",
+          "path": "json/"
+        },
+        "styles": {
+          "file": "choir.css",
+          "path": "css/"
+        },
+        "scripts": {
+          "file": "choir.js",
+          "path": "js/"
+        },
+        "icon": "music",
+        "order": 3
+      }
+    ]
+  },
+  "departments": {
+    "list": [
+      "media",
+      "choir",
+      "worship",
+      "children",
+      "youth",
+      "administration"
+    ],
+    "config": {
+      "autoGenerate": true,
+      "templatePath": "templates/",
+      "defaultTemplate": "department.html"
+    }
+  },
+  "content": {
+    "autoGeneration": {
+      "enabled": true,
+      "sources": [
+        "markdown",
+        "images",
+        "assets"
+      ],
+      "refreshInterval": 5000
+    },
+    "templates": {
+      "page": "templates/page.html",
+      "tab": "templates/tab.html",
+      "department": "templates/department.html"
+    }
+  },
+  "features": {
+    "dynamicTabs": {
+      "enabled": true,
+      "watchConfig": true,
+      "autoRefresh": true
+    },
+    "markdown": {
+      "enabled": true,
+      "parser": "marked",
+      "highlightCode": true
+    },
+    "search": {
+      "enabled": true,
+      "indexContent": true
+    },
+    "responsive": {
+      "enabled": true,
+      "breakpoints": {
+        "mobile": "768px",
+        "tablet": "1024px",
+        "desktop": "1200px"
+      }
+    }
+  },
+  "build": {
+    "outputDir": "dist/",
+    "minify": {
+      "css": true,
+      "js": true,
+      "html": false
+    },
+    "watch": true
+  },
+  "development": {
+    "hotReload": true,
+    "debugMode": false,
+    "logLevel": "info"
+  }
+}

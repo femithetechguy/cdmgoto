@@ -1,0 +1,133 @@
+{
+  "title": "CDM Documentation Portal",
+  "subtitle": "Comprehensive documentation for all departments",
+  "hero": {
+    "title": "Welcome to CDM",
+    "subtitle": "Documentation Made Dynamic",
+    "description": "Your one-stop portal for all department documentation, resources, and updates. Navigate through different departments and access the information you need.",
+    "className": "homepage-hero",
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "#explore",
+        "className": "btn-primary"
+      },
+      {
+        "text": "Learn More",
+        "link": "#about",
+        "className": "btn-secondary"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Quick Access",
+      "className": "quick-access-section",
+      "items": [
+        {
+          "title": "Media Resources",
+          "content": "Access all media assets, guidelines, and resources for your department.",
+          "link": "#media"
+        },
+        {
+          "title": "Choir Department",
+          "content": "Music sheets, practice schedules, and choir-specific documentation.",
+          "link": "#choir"
+        },
+        {
+          "title": "Documentation Hub",
+          "content": "Central repository for all departmental policies and procedures.",
+          "link": "#docs"
+        }
+      ]
+    }
+  ],
+  "grid": {
+    "title": "Department Overview",
+    "className": "department-grid",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "🎵",
+        "title": "Choir",
+        "description": "Music ministry documentation and resources",
+        "link": "#choir"
+      },
+      {
+        "icon": "📱",
+        "title": "Media",
+        "description": "Digital media assets and production guidelines",
+        "link": "#media"
+      },
+      {
+        "icon": "👥",
+        "title": "Administration",
+        "description": "Administrative procedures and policies",
+        "link": "#admin"
+      },
+      {
+        "icon": "🙏",
+        "title": "Worship",
+        "description": "Worship service planning and resources",
+        "link": "#worship"
+      },
+      {
+        "icon": "👶",
+        "title": "Children's Ministry",
+        "description": "Programs and activities for children",
+        "link": "#children"
+      },
+      {
+        "icon": "🌟",
+        "title": "Youth Ministry",
+        "description": "Youth programs and event planning",
+        "link": "#youth"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "title": "Recent Updates",
+      "content": "Stay up to date with the latest changes and announcements across all departments.",
+      "className": "update-card",
+      "link": "#updates"
+    },
+    {
+      "title": "Resources Library",
+      "content": "Access our comprehensive library of templates, forms, and reference materials.",
+      "className": "resources-card",
+      "link": "#resources"
+    },
+    {
+      "title": "Contact Information",
+      "content": "Find contact details for department heads and key personnel.",
+      "className": "contact-card",
+      "link": "#contact"
+    }
+  ],
+  "lists": [
+    {
+      "title": "Getting Started Checklist",
+      "type": "ordered",
+      "className": "checklist",
+      "items": [
+        {
+          "title": "Choose Your Department",
+          "content": "Navigate to your specific department tab"
+        },
+        {
+          "title": "Review Documentation",
+          "content": "Read through relevant policies and procedures"
+        },
+        {
+          "title": "Access Resources",
+          "content": "Download necessary forms and templates"
+        },
+        {
+          "title": "Stay Updated",
+          "content": "Check for regular updates and announcements"
+        }
+      ]
+    }
+  ]
+}
